@@ -71,14 +71,14 @@ namespace IterationStatements
 
                 if (num1 == num2)
                 {
-                    Console.WriteLine("True");
+                    return true;
                 }
                 else
                 {
-                    Console.WriteLine("False");
+                    return false;
                 }
             }    
-                    AreNumbersEqual(4, 5);
+                 AreNumbersEqual(4, 5);
 
 
 
@@ -87,57 +87,65 @@ namespace IterationStatements
 
                 if (number % 2 == 0)
                 {
-                    Console.WriteLine("True");
+                   
+                    return true;
                 }
                 else
                 {
-                    Console.WriteLine("False");
+                    return false;
                 }
             }
-                IsEven(15);
+                 IsEven(15);
 
 
 
             static bool IsPositive(int number)
             {
-                if (number > 0)
+                if (number >= 0)
                 {
-                    Console.WriteLine("True");
+                   return true;
                 }
-                else if (number < 0)
+                else
                 {
-                    Console.WriteLine("False");
+                   return false;
                 }
-            }    
-                IsPositive(1500);
+            }        
+                 IsPositive(1500);
+
 
 
             static bool CanVote(int age)
             {
                 if (age >= 18)
                 {
-                    Console.WriteLine("True");
+                    return true;
                 }
                 else
                 {
-                    Console.WriteLine("False");
+                    return false;
                 }
             }    
-                CanVote(25);
+                 CanVote(25);
 
 
             static bool IsRange(int number)
             {
                 if(number < 10 && number > -10)
                 {
-                    Console.WriteLine("True");
+                    return true;
                 }
                 else
                 {
-                    Console.WriteLine("False");                }
+                    return false;   
+                }
             }
                 Console.WriteLine("Please input a number");
-                Console.ReadLine(${IsRange});
+                int userInput = int.Parse(Console.ReadLine());
+
+                Console.WriteLine($"{IsRange(userInput)}");
+
+
+
 
 
                 // 2. Write a method that displays the multiplication table (from 1 to 12) for a given integer.
@@ -161,9 +169,9 @@ namespace IterationStatements
             }
             
                 Console.WriteLine("Pick a number");
-                int userInput = int.Parse(Console.ReadLine());
+                int userInput1 = int.Parse(Console.ReadLine());
 
-                DisplayMultiplicationTable(userInput);
+                DisplayMultiplicationTable(userInput1);
 
                 
             
