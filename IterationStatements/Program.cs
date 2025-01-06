@@ -1,4 +1,7 @@
-﻿namespace IterationStatements
+﻿using System.Formats.Asn1;
+using System.Globalization;
+
+namespace IterationStatements
 {
     public class Program
     {
@@ -39,7 +42,135 @@
         // Use various test cases to ensure they work as expected.        
         static void Main(string[] args)
         {
+            static void PrintNumbers()
+            {
+               
+                for (int num = 1000; num <= 1000 && num >= -1000; num--)
+                {
+                    Console.WriteLine(num);
+                }
+            }
+                    PrintNumbers();
+
+
             
+            static void PrintEveryThirdNumber()
+            {
+
+                for (int threes = 3; threes <= 999; threes += 3)
+                {
+                    Console.WriteLine(threes);
+                }
+            }    
+                    PrintEveryThirdNumber();
+
+
+
+            static bool AreNumbersEqual(int num1, int num2)
+            {
+
+                if (num1 == num2)
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }    
+                    AreNumbersEqual(4, 5);
+
+
+
+            static bool IsEven(int number)
+            {
+
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }
+                IsEven(15);
+
+
+
+            static bool IsPositive(int number)
+            {
+                if (number > 0)
+                {
+                    Console.WriteLine("True");
+                }
+                else if (number < 0)
+                {
+                    Console.WriteLine("False");
+                }
+            }    
+                IsPositive(1500);
+
+
+            static bool CanVote(int age)
+            {
+                if (age >= 18)
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }    
+                CanVote(25);
+
+
+            static bool IsRange(int number)
+            {
+                if(number < 10 && number > -10)
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");                }
+            }
+                Console.WriteLine("Please input a number");
+                Console.ReadLine(${IsRange});
+
+
+                // 2. Write a method that displays the multiplication table (from 1 to 12) for a given integer.
+        //    - Method Signature: void DisplayMultiplicationTable(int number)
+        //    - Should print each line in the format: "1 * number = result"
+
+            static void DisplayMultiplicationTable(int number)
+            {
+                Console.WriteLine($"1 * {number} = {number * 1}");   
+                Console.WriteLine($"2 * {number} = {number * 2}");
+                Console.WriteLine($"3 * {number} = {number * 3}");
+                Console.WriteLine($"4 * {number} = {number * 4}");
+                Console.WriteLine($"5 * {number} = {number * 5}");
+                Console.WriteLine($"6 * {number} = {number * 6}");
+                Console.WriteLine($"7 * {number} = {number * 7}");
+                Console.WriteLine($"8 * {number} = {number * 8}");
+                Console.WriteLine($"9 * {number} = {number * 9}");
+                Console.WriteLine($"10 * {number} = {number * 10}");
+                Console.WriteLine($"11 * {number} = {number * 11}");
+                Console.WriteLine($"12 * {number} = {number * 12}"); 
+            }
+            
+                Console.WriteLine("Pick a number");
+                int userInput = int.Parse(Console.ReadLine());
+
+                DisplayMultiplicationTable(userInput);
+
+                
+            
+
+
+
         }
+
     }
 }
